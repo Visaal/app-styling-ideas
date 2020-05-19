@@ -164,3 +164,56 @@ button {
 button:hover {
   filter: brightness(107%);
 }
+
+.landing-page-form {
+  /* https://css-tricks.com/centering-css-complete-guide/ */
+  width: 20%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-file-input {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.custom-file-input-label {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: var(--button);
+  border: 1px solid var(--button);
+  color: var(--button-text);
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  padding: 0.65rem 0rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  /* z-index: 1; */
+  /* display: inline-block; */
+  transition: background-color 0.3s;
+}
+
+.custom-file-input:focus,
+.custom-file-input-label:hover {
+  filter: brightness(107%);
+}
