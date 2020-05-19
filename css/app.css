@@ -175,6 +175,7 @@ button:hover {
 }
 
 .custom-file-input {
+  /* https://benmarshall.me/styling-file-inputs/ */
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
