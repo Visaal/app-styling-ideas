@@ -179,11 +179,11 @@ button:hover {
 }
 
 .landing-page-form h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.landing-page-form h2,
+.landing-page-form h3,
+.landing-page-form h4,
+.landing-page-form h5,
+.landing-page-form h6 {
   text-align: center;
 }
 
