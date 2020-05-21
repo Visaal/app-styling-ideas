@@ -178,6 +178,22 @@ button:hover {
   transform: translate(-50%, -50%);
 }
 
+@media only screen and (max-width: 800px) {
+  /* For mobile phones: */
+  .landing-page-form {
+    /* https://css-tricks.com/centering-css-complete-guide/ */
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  /* For mobile phones: */
+  .landing-page-form {
+    /* https://css-tricks.com/centering-css-complete-guide/ */
+    width: 60%;
+  }
+}
+
 .landing-page-form h1,
 .landing-page-form h2,
 .landing-page-form h3,
