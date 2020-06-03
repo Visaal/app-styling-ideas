@@ -73,11 +73,11 @@ select {
   padding-top: 0px;
   padding-bottom: 0px;
   box-sizing: border-box;
-  vertical-align: top;
+  vertical-align: bottom;
   outline: 0;
   border-radius: 4px;
   width: 100%;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
 }
 input:focus {
   outline: none;
@@ -335,4 +335,57 @@ progress::-moz-progress-bar {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+/* ACTION BAR */
+.action-bar-container {
+  margin: 10px;
+}
+
+.action-bar {
+  border-bottom: 1px solid var(--table-border);
+  border-top: 1px solid var(--table-border);
+  height: 40px;
+  position: relative;
+}
+
+.action-bar-section {
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-right: 1px solid var(--table-border);
+}
+
+.action-bar-element {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: var(--teritary);
+}
+/* ACTION BAR */
+
+/* DATA PAGINATION */
+.pagination {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+/* PAGINATION STYLING */
+
+span.pagination {
+  text-decoration: none;
+  transition: 0.3s;
+  border: 0px solid #ddd;
+  cursor: pointer;
+}
+
+span:hover.pagination {
+  background-color: var(--secondary);
+  text-decoration: none;
+  cursor: pointer;
 }
