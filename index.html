@@ -46,8 +46,51 @@
         </fieldset>
       </div>
 
+      <div class="content-action-menu">
+        <div class="action-bar-container">
+          <div class="action-bar">
+            <div class="action-bar-section">
+              <div class="action-bar-element">
+                <div class="pagination">
+                  <div class="backward">❮</div>
+                </div>
+              </div>
+              <div class="action-bar-element">
+                <div class="pagination">
+                  <div class="forward">❯</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="action-bar-section">
+              <span class="action-bar-element">show</span>
+              <div class="action-bar-element">
+                <div class="selectWrapper">
+                  <select
+                    v-model="rowsToDisplay"
+                    @change="setRowPerPage(rowsToDisplay)"
+                  >
+                    <option>10</option>
+                    <option>50</option>
+                    <option :value="rowsToDisplay">100</option>
+                    <option>250</option>
+                    <option>500</option>
+                  </select>
+                </div>
+              </div>
+              <span class="action-bar-element">records per page</span>
+            </div>
+            <div class="action-bar-section">
+              <div class="action-bar-element">hello</div>
+            </div>
+          </div>
+          <div>
+            Showing from {{ rowStartSliceIndex }} until {{ rowEndSliceIndex }}
+          </div>
+        </div>
+      </div>
+
       <div class="content">
-        <h2>Data</h2>
         <table>
           <thead>
             <tr>

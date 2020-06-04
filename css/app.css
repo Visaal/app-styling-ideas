@@ -27,7 +27,7 @@ body {
   display: grid;
   grid-gap: 0px;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 40px auto 40px;
+  grid-template-rows: 40px 80px auto 40px;
   background-color: var(--background);
 }
 
@@ -39,12 +39,18 @@ body {
   vertical-align: middle;
   padding-left: 10px;
   padding-right: 10px;
+  font-weight: bolder;
 }
 
 .side-panel {
   grid-column: 1 / 3;
   color: var(--paragraph);
   margin: 10px;
+}
+
+.content-action-menu {
+  grid-column: 3/-1;
+  /* border-bottom: 2px solid var(--field-grey); */
 }
 
 .content {
@@ -77,10 +83,14 @@ select {
   outline: 0;
   border-radius: 4px;
   width: 100%;
-  /* margin-bottom: 8px; */
 }
 input:focus {
   outline: none;
+}
+
+fieldset > input[type="text"],
+fieldset > select {
+  margin-bottom: 8px;
 }
 
 label {
@@ -339,31 +349,38 @@ progress::-moz-progress-bar {
 
 /* ACTION BAR */
 .action-bar-container {
-  margin: 10px;
+  margin: 0px;
 }
-
 .action-bar {
-  border-bottom: 1px solid var(--table-border);
-  border-top: 1px solid var(--table-border);
+  border-bottom: 2px solid var(--field-grey);
   height: 40px;
-  position: relative;
+  margin-bottom: 5px;
 }
-
 .action-bar-section {
   display: inline-block;
   position: relative;
   height: 30px;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-right: 1px solid var(--table-border);
+  border-right: 2px solid var(--field-grey);
 }
-
+.action-bar.action-bar-section :not(:first-child) {
+  /* margin-left: 5px; */
+}
 .action-bar-element {
   display: inline-block;
   height: 30px;
   line-height: 30px;
   text-align: center;
-  background-color: var(--teritary);
+  margin-right: 5px;
+  background-color: var(--field-grey);
+}
+.action-bar-element :not(:first-child) {
+  /* margin-left: 5px; */
+}
+div.action-bar-element {
+  /* margin-left: */
+  background-color: var(--background);
 }
 /* ACTION BAR */
 
@@ -373,19 +390,55 @@ progress::-moz-progress-bar {
   padding-left: 10px;
   padding-right: 10px;
   box-sizing: border-box;
+  background-color: var(--field-grey);
 }
 
 /* PAGINATION STYLING */
 
-span.pagination {
+div.pagination {
   text-decoration: none;
   transition: 0.3s;
   border: 0px solid #ddd;
   cursor: pointer;
 }
 
-span:hover.pagination {
+div:hover.pagination {
   background-color: var(--secondary);
   text-decoration: none;
   cursor: pointer;
+}
+
+/* DATA PAGINATION */
+.pagination {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+/* PAGINATION STYLING */
+div.pagination {
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+div.pagination > .forward {
+  transition: 0.3s;
+}
+div.pagination > .backward {
+  transition: 0.3s;
+}
+div:hover.pagination {
+  background-color: var(--secondary);
+  text-decoration: none;
+  cursor: pointer;
+}
+div:hover.pagination > .forward {
+  transform: translateX(3px);
+  -webkit-transform: translateX(3px);
+  -ms-transform: translateX(3px);
+}
+div:hover.pagination > .backward {
+  transform: translateX(-3px);
+  -webkit-transform: translateX(-3px);
+  -ms-transform: translateX(-3px);
 }
