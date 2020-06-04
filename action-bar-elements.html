@@ -13,28 +13,27 @@
       <div class="action-bar">
         <div class="action-bar-section">
           <div class="action-bar-element">
-            <div class="pagination" @click="previousPage()">
+            <div class="pagination">
               <div class="backward">❮</div>
             </div>
           </div>
           <div class="action-bar-element">
-            <div class="pagination" @click="nextPage()">
+            <div class="pagination"">
               <div class="forward">❯</div>
             </div>
           </div>
         </div>
 
+        <div class="action-bar-divider"></div>
+
         <div class="action-bar-section">
           <span class="action-bar-element">show</span>
           <div class="action-bar-element">
             <div class="selectWrapper">
-              <select
-                v-model="rowsToDisplay"
-                @change="setRowPerPage(rowsToDisplay)"
-              >
+              <select>
                 <option>10</option>
                 <option>50</option>
-                <option :value="rowsToDisplay">100</option>
+                <option>100</option>
                 <option>250</option>
                 <option>500</option>
               </select>
@@ -47,9 +46,7 @@
           <div class="action-bar-element">hello</div>
         </div>
       </div>
-      <div>
-        Showing from {{ rowStartSliceIndex }} until {{ rowEndSliceIndex }}
-      </div>
+      <div class="data-row-info">Showing from {{ rowStartSliceIndex }} until {{ rowEndSliceIndex }}</div>
     </div>
   </body>
 </html>
