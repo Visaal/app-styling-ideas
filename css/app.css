@@ -444,3 +444,69 @@ div:hover.pagination > .backward {
   font-size: 0.8rem;
   font-weight: bold;
 }
+
+.data-types {
+  margin: 10px;
+  width: calc(100% / 6);
+}
+
+/* CUSTOM RADIO BUTTON */
+/* The container */
+.custom-radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.custom-radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.radiomark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: var(--field-grey);
+  border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.custom-radio input:checked ~ .radiomark {
+  background-color: var(--field-grey);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radiomark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.custom-radio input:checked ~ .radiomark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.custom-radio .radiomark:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--paragraph);
+}
