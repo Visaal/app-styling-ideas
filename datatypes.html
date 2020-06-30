@@ -18,6 +18,10 @@
         <option value="">Rule 3</option>
       </select>
 
+    </fieldset>
+
+    <fieldset>
+
       <label>Select Field: </label>
       <select name="" id="">
         <option value="">Campaign ID</option>
@@ -32,18 +36,19 @@
         <option value="">Date</option>
       </select>
 
-      <label>Set Non-Numeric Values to: </label>
 
-      <label class="custom-radio">
-        <input type="number" name="radio" />
-        <input type="radio" checked="checked" name="radio" />
-        <span class="radiomark"></span>
-      </label>
-      <label class="custom-radio"
-        >null
+      <label>Set Non-Numeric Values to:</label>
+      <label class="custom-radio" name="radio">
         <input type="radio" name="radio" />
-        <span class="radiomark"></span>
+        <label for="radio">null</label>
+        <span class="radiomark" name="radio""></span>
       </label>
+      <label class="custom-radio" name="radio">
+        <input type="radio" name="radio" />
+        <span class="radiomark" name="radio"></span>
+        <input type="number" name="radio" />
+      </label>
+
     </fieldset>
   </body>
 </html>
