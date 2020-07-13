@@ -506,29 +506,6 @@ div:hover.pagination > .backward {
   line-height: 20px;
 }
 
-/* FIELD LIST STYLING */
-.field-list-fieldset {
-  width: 20vw;
-}
-.field-list-action {
-  height: 100px;
-}
-.field-list {
-  height: 30%;
-  overflow: auto;
-}
-.field-list-fieldset h3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-.action-button-container {
-  width: 100%;
-  border-bottom: 2px solid var(--field-grey);
-}
-.action-button-container > button {
-  margin-right: 2%;
-  width: 45%;
-}
 .secondary {
   background-color: var(--field-grey);
   border-color: var(--field-grey);
@@ -581,22 +558,23 @@ progress::-moz-progress-bar {
 }
 
 .filter-box-search {
-  margin-bottom: 10px;
-}
-
-.filter-value-list {
-  padding-top: 10px;
   padding-bottom: 10px;
-  max-height: 20vh;
-  overflow-y: auto;
-  border-top: 2px;
-  border-top-style: solid;
   border-bottom: 2px;
   border-bottom-style: solid;
   border-color: var(--field-grey);
 }
 
+.filter-value-list {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-height: 20vh;
+  overflow-y: auto;
+}
+
 .filter-list-actions {
+  border-top: 2px;
+  border-top-style: solid;
+  border-color: var(--field-grey);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -607,5 +585,40 @@ progress::-moz-progress-bar {
 }
 
 .filter-list-actions button {
+  width: 48%;
+}
+
+/* FIELD LIST STYLING */
+.field-list-fieldset {
+  width: 20vw;
+  max-height: 50vh;
+}
+
+.field-list {
+  margin-top: 10px;
+  height: 75vh;
+  padding-bottom: 10px;
+  max-height: 20vh;
+  overflow-y: auto;
+}
+
+.field-list-fieldset h3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.action-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 2px solid var(--field-grey);
+}
+
+.action-button-container button:first-child {
+  margin-right: 4%;
+}
+
+.action-button-container button {
   width: 48%;
 }
