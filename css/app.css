@@ -1,6 +1,6 @@
 html,
 body {
-  margin: 0px;
+  margin: 10px;
   height: 100%;
 }
 
@@ -46,10 +46,19 @@ body {
   background-color: var(--teritary);
 }
 
+.elements-display {
+  column-count: 4;
+  column-gap: 1rem;
+}
+
 /* FORM ELEMENT HTML SPACE */
 .element-showcase {
   margin: 1rem;
   display: inline-flex;
+  -webkit-column-break-inside: avoid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* FORM ELEMENT HTML SPACE */
