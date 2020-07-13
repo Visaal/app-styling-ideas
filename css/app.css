@@ -514,7 +514,7 @@ div:hover.pagination > .backward {
   height: 100px;
 }
 .field-list {
-  /* height: 75vh; */
+  height: 30%;
   overflow: auto;
 }
 .field-list-fieldset h3 {
@@ -573,4 +573,39 @@ progress::-webkit-progress-bar {
 }
 progress::-moz-progress-bar {
   background-color: var(--button);
+}
+
+/* FILTER BOX */
+.filter-box {
+  max-height: 50vh;
+}
+
+.filter-box-search {
+  margin-bottom: 10px;
+}
+
+.filter-value-list {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  max-height: 20vh;
+  overflow-y: auto;
+  border-top: 2px;
+  border-top-style: solid;
+  border-bottom: 2px;
+  border-bottom-style: solid;
+  border-color: var(--field-grey);
+}
+
+.filter-list-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-list-actions button:first-child {
+  margin-right: 4%;
+}
+
+.filter-list-actions button {
+  width: 48%;
 }
