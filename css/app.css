@@ -56,9 +56,9 @@ body {
   margin: 1rem;
   display: inline-flex;
   -webkit-column-break-inside: avoid;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
 }
 
 /* FORM ELEMENT HTML SPACE */
@@ -388,7 +388,7 @@ progress::-moz-progress-bar {
 }
 
 div.action-bar-element {
-  background-color: var(--background);
+  background-color: var(--field-grey);
 }
 /* ACTION BAR */
 
@@ -599,7 +599,7 @@ progress::-moz-progress-bar {
 
 /* FIELD LIST STYLING */
 .field-list-fieldset {
-  width: 20vw;
+  /* width: 20vw; */
   max-height: 50vh;
 }
 
@@ -630,4 +630,42 @@ progress::-moz-progress-bar {
 
 .action-button-container button {
   width: 48%;
+}
+
+/* UNDO BUTTON */
+
+.action-bar-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: var(--field-grey);
+  border-color: var(--field-grey);
+  color: var(--button-text);
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  padding: 0.65rem 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  z-index: 1;
+}
+
+.action-bar-button:hover {
+  filter: brightness(93%);
+}
+
+.action-bar-button:hover > img {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transition: 0.3s;
 }
