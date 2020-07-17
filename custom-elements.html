@@ -98,16 +98,14 @@
       <div class="element-showcase">
         <fieldset>
             <h4>Back Forward Navigation</h4>
-            <div class="action-bar-element">
-              <div class="pagination">
-                <div class="backward">❮</div>
-              </div>
-            </div>
-            <div class="action-bar-element">
-              <div class="pagination"">
-                <div class="forward">❯</div>
-              </div>
-            </div>
+
+            <button class="action-bar-button">
+              <div class="backward">❮</div>
+            </button>
+
+            <button class="action-bar-button">
+              <div class="forward">❯</div>
+            </button>            
         </fieldset>
       </div>
 
@@ -118,7 +116,7 @@
             <h4>Table Header</h4>
             <table>
               <thead>
-            <td class="custom-field-header" :id="field">
+            <td class="custom-field-header" id="field">
               <div class="field-name">Field Name</div>
               <div class="data-type">sub-info</div>
               <div class="data-match">
@@ -140,6 +138,33 @@
         </fieldset>
       </div>
 
+      <!-- TABLE HEADER - NEW FIELD -->
+      <div class="element-showcase">
+        <fieldset>
+            <h4>Table Header - New Field</h4>
+            <table>
+              <thead>
+            <td class="custom-field-header new-field" id="field">
+              <div class="field-name">New Field Name</div>
+              <div class="data-type">sub-info</div>
+              <div class="data-match">
+                <progress class="amount-progress" value="70" max="100"></progress>
+              </div>
+            </td>
+            </thead>
+            <tbody>
+              <tr>
+                <td>data</td>
+              </tr>
+              <tr>
+                <td>data</td>
+              </tr>
+              <tr>
+                <td>data</td>
+              </tr>
+            </table>
+        </fieldset>
+      </div>
 
       <!-- UNDO BUTTON -->
       <div class="element-showcase">
@@ -152,7 +177,7 @@
       </div>
 
     </div>
-    
+
     <!-- FIELD VALUE FILTER BOX -->
     <div class="element-showcase">
       <fieldset class="field-list-fieldset">

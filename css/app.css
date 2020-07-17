@@ -347,94 +347,6 @@ progress::-moz-progress-bar {
   transform: rotate(45deg);
 }
 
-/* ACTION BAR */
-.action-bar-container {
-  margin: 0px;
-}
-
-.action-bar {
-  border-bottom: 2px solid var(--field-grey);
-  height: 40px;
-  margin-bottom: 5px;
-}
-
-.action-bar-section {
-  display: inline-block;
-  position: relative;
-  height: 30px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.action-bar-divider {
-  display: inline-block;
-  position: relative;
-  height: 30px;
-  border-left: 2px solid var(--field-grey);
-  margin-top: 5px;
-  margin-bottom: 5px;
-  vertical-align: bottom; /* important to have this or other elements around it will be displaced */
-  margin-left: 8px;
-  margin-right: 8px;
-}
-
-.action-bar-element {
-  display: inline-block;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  font-size: 0.8rem;
-  color: var(--field-label);
-}
-
-div.action-bar-element {
-  background-color: var(--field-grey);
-}
-/* ACTION BAR */
-
-/* DATA PAGINATION */
-.pagination {
-  display: inline-block;
-  padding-left: 10px;
-  padding-right: 10px;
-  box-sizing: border-box;
-  background-color: var(--field-grey);
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bolder;
-  color: var(--paragraph);
-}
-
-/* PAGINATION STYLING */
-div.pagination > .forward {
-  transition: 0.3s;
-  font-size: 1rem;
-  font-weight: bolder;
-  color: var(--paragraph);
-}
-div.pagination > .backward {
-  transition: 0.3s;
-  font-size: 1rem;
-  font-weight: bolder;
-  color: var(--paragraph);
-}
-div:hover.pagination {
-  background-color: var(--secondary);
-  text-decoration: none;
-  cursor: pointer;
-}
-div:hover.pagination > .forward {
-  transform: translateX(3px);
-  -webkit-transform: translateX(3px);
-  -ms-transform: translateX(3px);
-}
-div:hover.pagination > .backward {
-  transform: translateX(-3px);
-  -webkit-transform: translateX(-3px);
-  -ms-transform: translateX(-3px);
-}
-
 .data-row-info {
   font-size: 0.8rem;
   color: var(--field-label);
@@ -530,6 +442,11 @@ div:hover.pagination > .backward {
   background-color: var(--field-grey);
   white-space: nowrap;
 }
+
+.new-field {
+  background-color: var(--secondary);
+}
+
 .field-name {
   padding: 5px;
   font-weight: 800;
@@ -632,7 +549,36 @@ progress::-moz-progress-bar {
   width: 48%;
 }
 
-/* UNDO BUTTON */
+/* ACTION BAR */
+.action-bar-container {
+  margin: 0px;
+}
+
+.action-bar {
+  border-bottom: 2px solid var(--field-grey);
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.action-bar-section {
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.action-bar-divider {
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  border-left: 2px solid var(--field-grey);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  vertical-align: bottom; /* important to have this or other elements around it will be displaced */
+  margin-left: 8px;
+  margin-right: 8px;
+}
 
 .action-bar-button {
   margin-top: 10px;
@@ -663,9 +609,31 @@ progress::-moz-progress-bar {
   filter: brightness(93%);
 }
 
+/* UNDO BUTTON */
 .action-bar-button:hover > img {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transition: 0.3s;
 }
+
+.action-bar-button > .backward {
+  transition: 0.3s;
+  font-size: 1rem;
+}
+.action-bar-button:hover > .backward {
+  transform: translateX(-3px);
+  -webkit-transform: translateX(-3px);
+  -ms-transform: translateX(-3px);
+}
+
+.action-bar-button > .forward {
+  transition: 0.3s;
+  font-size: 1rem;
+}
+.action-bar-button:hover > .forward {
+  transform: translateX(3px);
+  -webkit-transform: translateX(3px);
+  -ms-transform: translateX(3px);
+}
+/* ACTION BAR */
