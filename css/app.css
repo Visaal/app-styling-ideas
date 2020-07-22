@@ -347,11 +347,6 @@ progress::-moz-progress-bar {
   transform: rotate(45deg);
 }
 
-.data-row-info {
-  font-size: 0.8rem;
-  color: var(--field-label);
-}
-
 .data-stat {
   font-size: 0.8rem;
   font-weight: bold;
@@ -550,22 +545,15 @@ progress::-moz-progress-bar {
 }
 
 /* ACTION BAR */
-.action-bar-container {
-  margin: 0px;
-}
-
-.action-bar {
+.action-top {
+  width: 100%;
   border-bottom: 2px solid var(--field-grey);
-  height: 40px;
   margin-bottom: 5px;
 }
 
-.action-bar-section {
-  display: inline-block;
-  position: relative;
-  height: 30px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+.action-top span {
+  font-size: 0.8rem;
+  color: var(--field-label);
 }
 
 .action-bar-divider {
@@ -573,16 +561,29 @@ progress::-moz-progress-bar {
   position: relative;
   height: 30px;
   border-left: 2px solid var(--field-grey);
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   vertical-align: bottom; /* important to have this or other elements around it will be displaced */
   margin-left: 8px;
   margin-right: 8px;
 }
 
+.data-row-info {
+  font-size: 0.8rem;
+  color: var(--field-label);
+}
+
+.action-bar-option {
+  width: 70px;
+  margin-bottom: 11px;
+  margin-top: 0px;
+}
+
 .action-bar-button {
   margin-top: 10px;
   margin-bottom: 10px;
+  height: 30px;
+  line-height: 30px;
   background-color: var(--field-grey);
   border-color: var(--field-grey);
   color: var(--button-text);
@@ -610,16 +611,21 @@ progress::-moz-progress-bar {
 }
 
 /* UNDO BUTTON */
-.action-bar-button:hover > img {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
+.action-bar-button > .undo {
+  margin-right: 3px;
   transition: 0.3s;
+  font-weight: 900;
+  overflow: hidden;
+}
+
+.action-bar-button:hover > .undo {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
 }
 
 .action-bar-button > .backward {
   transition: 0.3s;
-  font-size: 1rem;
 }
 .action-bar-button:hover > .backward {
   transform: translateX(-3px);
@@ -629,11 +635,21 @@ progress::-moz-progress-bar {
 
 .action-bar-button > .forward {
   transition: 0.3s;
-  font-size: 1rem;
 }
 .action-bar-button:hover > .forward {
   transform: translateX(3px);
   -webkit-transform: translateX(3px);
   -ms-transform: translateX(3px);
 }
+
 /* ACTION BAR */
+
+.filter-icon {
+  stroke: var(--field-label);
+  height: 15px;
+  width: 15px;
+}
+
+.active {
+  fill: var(--field-label);
+}

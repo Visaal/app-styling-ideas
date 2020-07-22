@@ -116,8 +116,8 @@
             <h4>Table Header</h4>
             <table>
               <thead>
-            <td class="custom-field-header" id="field">
-              <div class="field-name">Field Name</div>
+            <td class="custom-field-header" id="field">     
+              <div class="field-name">Field Name <svg class="filter-icon" fill="none" height="24" stroke="#546778" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></div>
               <div class="data-type">sub-info</div>
               <div class="data-match">
                 <progress class="amount-progress" value="30" max="100"></progress>
@@ -138,6 +138,35 @@
         </fieldset>
       </div>
 
+      <!-- TABLE HEADER WITH ACTIVE FILTER-->
+      <div class="element-showcase">
+        <fieldset>
+            <h4>Table Header with Active Filter</h4>
+            <table>
+              <thead>
+            <td class="custom-field-header" id="field">     
+              <div class="field-name">Field Name <svg class="filter-icon active" fill="none" height="24" stroke="#546778" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></div>
+              <div class="data-type">sub-info</div>
+              <div class="data-match">
+                <progress class="amount-progress" value="30" max="100"></progress>
+              </div>
+            </td>
+            </thead>
+            <tbody>
+              <tr>
+                <td>data</td>
+              </tr>
+              <tr>
+                <td>data</td>
+              </tr>
+              <tr>
+                <td>data</td>
+              </tr>
+            </table>
+        </fieldset>
+      </div>
+
+
       <!-- TABLE HEADER - NEW FIELD -->
       <div class="element-showcase">
         <fieldset>
@@ -145,7 +174,7 @@
             <table>
               <thead>
             <td class="custom-field-header new-field" id="field">
-              <div class="field-name">New Field Name</div>
+              <div class="field-name">New Field Name <svg class="filter-icon" fill="none" height="24" stroke="#546778" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></div>
               <div class="data-type">sub-info</div>
               <div class="data-match">
                 <progress class="amount-progress" value="70" max="100"></progress>
@@ -171,7 +200,7 @@
         <fieldset>
           <h4>Undo Button</h4>
           <div>
-            <button class="action-bar-button"><img class="undo" src="./assets/undo.svg" alt="undo" />&nbspundo</button>
+            <button class="action-bar-button"><div class="undo">↺</div>undo</button>
           </div>
         </fieldset>
       </div>
@@ -392,5 +421,42 @@
 
       </fieldset>     
     </div> 
+
+      <!-- ACTION BAR -->
+      <div class="element-showcase">
+        <fieldset>
+            <h4>Action Bar</h4>
+
+            <div class="action-top">
+              <button class="action-bar-button">
+                <div class="backward">❮</div>
+              </button>
+    
+              <button class="action-bar-button">
+                <div class="forward">❯</div>
+              </button>
+              
+              <div class="action-bar-divider"></div>
+ 
+              <span>show </span>
+              <select class="action-bar-option">
+                <option>10</option>
+                <option>50</option>
+                <option>100</option>
+                <option>250</option>
+                <option>500</option>
+              </select>
+              <span> records per page</span>   
+
+              <div class="action-bar-divider"></div>
+
+              <button class="action-bar-button"><div class="undo">↺</div>undo</button>
+            </div>
+
+            <div class="data-row-info">Showing record 1 until 100 of 550 records</div>
+            
+        </fieldset>
+      </div>
+
   </body>
 </html>
