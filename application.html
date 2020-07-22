@@ -48,53 +48,37 @@
       </div>
 
       <div class="content-action-menu">
-        <div class="action-bar-container">
-          <div class="action-bar">
-            <div class="action-bar-section">
-              <div class="action-bar-element">
-                <div class="pagination">
-                  <div class="backward">❮</div>
-                </div>
-              </div>
-              <div class="action-bar-element">
-                <div class="pagination">
-                  <div class="forward">❯</div>
-                </div>
-              </div>
-            </div>
+        <div class="action-top">
+          <button class="action-bar-button">
+            <div class="backward">❮</div>
+          </button>
 
-            <div class="action-bar-divider"></div>
+          <button class="action-bar-button">
+            <div class="forward">❯</div>
+          </button>
 
-            <div class="action-bar-section">
-              <span class="action-bar-element">show</span>
-              <div class="action-bar-element">
-                <div class="selectWrapper">
-                  <select
-                    v-model="rowsToDisplay"
-                    @change="setRowPerPage(rowsToDisplay)"
-                  >
-                    <option>10</option>
-                    <option>50</option>
-                    <option :value="rowsToDisplay">100</option>
-                    <option>250</option>
-                    <option>500</option>
-                  </select>
-                </div>
-              </div>
-              <span class="action-bar-element">records per page</span>
-            </div>
+          <div class="action-bar-divider"></div>
 
-            <div class="action-bar-divider"></div>
+          <span>show </span>
+          <select class="action-bar-option">
+            <option>10</option>
+            <option>50</option>
+            <option>100</option>
+            <option>250</option>
+            <option>500</option>
+          </select>
+          <span> records per page</span>
 
-            <div class="action-bar-section">
-              <div class="action-bar-element">hello</div>
-            </div>
-          </div>
-          <div class="data-row-info">
-            Showing from <span class="data-stat">100</span> to
-            <span class="data-stat">200</span> of
-            <span class="data-stat">1000</span> records
-          </div>
+          <div class="action-bar-divider"></div>
+
+          <button class="action-bar-button">
+            <div class="undo">↺</div>
+            undo
+          </button>
+        </div>
+
+        <div class="data-row-info">
+          Showing record 1 until 100 of 550 records
         </div>
       </div>
 
