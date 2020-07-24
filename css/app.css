@@ -488,8 +488,56 @@ progress::-moz-progress-bar {
 .filter-value-list {
   margin-top: 10px;
   margin-bottom: 10px;
-  max-height: 20vh;
+  max-height: 0vh;
   overflow-y: auto;
+}
+
+.expanded.filter-value-list {
+  overflow-y: auto;
+  animation: undefined-easeOutElastic 1.2s none;
+  max-height: 20vh;
+}
+
+@keyframes undefined-easeOutElastic {
+  0% {
+    /* transform: translateY(0%); */
+    max-height: 0vh;
+  }
+
+  16% {
+    /* transform: translateY(132.27%); */
+    max-height: 25vh;
+  }
+
+  28% {
+    /* transform: translateY(86.88%); */
+    max-height: 15vh;
+  }
+
+  44% {
+    /* transform: translateY(104.63%); */
+    max-height: 22vh;
+  }
+
+  59% {
+    /* transform: translateY(98.36%); */
+    max-height: 18vh;
+  }
+
+  73% {
+    /* transform: translateY(100.58%); */
+    max-height: 21vh;
+  }
+
+  88% {
+    /* transform: translateY(99.8%); */
+    max-height: 19vh;
+  }
+
+  100% {
+    /* transform: translateY(100%); */
+    max-height: 20vh;
+  }
 }
 
 .filter-list-actions {
@@ -512,7 +560,7 @@ progress::-moz-progress-bar {
 /* FIELD LIST STYLING */
 .field-list-fieldset {
   /* width: 20vw; */
-  max-height: 50vh;
+  /* max-height: 50vh; */
 }
 
 .field-list {
@@ -648,6 +696,8 @@ progress::-moz-progress-bar {
   stroke: var(--field-label);
   height: 15px;
   width: 15px;
+  transition: 0.5s;
+  fill: transparent;
 }
 
 .active {
