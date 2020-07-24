@@ -36,7 +36,7 @@ body {
 
 .card > h1 {
   color: var(--paragraph);
-  font-size: 4.5vw;
+  font-size: 2rem;
   border-bottom: 0.3rem;
   border-bottom-style: solid;
   border-color: var(--paragraph);
