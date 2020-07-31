@@ -1,0 +1,82 @@
+body {
+  margin: 20px;
+}
+
+.field-detail-breakdown {
+  color: var(--stroke);
+  border-color: var(--field-grey);
+  background-color: var(--teritary);
+  width: 33vw;
+  font-size: 0.9rem;
+  height: 100%;
+  overflow-y: auto;
+  transition: 1s ease-in-out;
+  position: absolute;
+  left: -33vw;
+}
+
+.field-name-header {
+  padding: 10px;
+  background-color: var(--button);
+  box-sizing: border-box;
+}
+
+.data-type-breakdown {
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 2px solid;
+  border-color: var(--field-grey);
+}
+
+.data-type-row {
+  display: flex;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  background-color: var(--teritary);
+}
+
+.data-type-row:hover {
+  filter: brightness(107%);
+}
+
+.data-type-name {
+  width: 50%;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.data-type-stat {
+  width: 20%;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.distinct-value-breakdown {
+  padding: 10px;
+}
+
+.distinct-value-rows {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  display: flex;
+  background-color: var(--teritary);
+}
+
+.distinct-value {
+  width: 50%;
+}
+
+.distinct-value-stat {
+  width: 0%;
+  background-color: var(--button);
+  transition: 0.9s ease-in-out;
+  transform-origin: left;
+}
+
+.distinct-value-rows:hover {
+  filter: brightness(107%);
+}
+
+.show {
+  transform: translateX(33vw);
+}
