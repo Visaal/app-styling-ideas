@@ -15,6 +15,10 @@ body {
   left: -33vw;
 }
 
+.show {
+  transform: translateX(33vw);
+}
+
 .field-name-header {
   padding: 10px;
   background-color: var(--button);
@@ -69,14 +73,11 @@ body {
 .distinct-value-stat {
   width: 0%;
   background-color: var(--button);
+  transition-delay: 10s;
   transition: 0.9s ease-in-out;
   transform-origin: left;
 }
 
 .distinct-value-rows:hover {
   filter: brightness(107%);
-}
-
-.show {
-  transform: translateX(33vw);
 }
